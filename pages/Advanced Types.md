@@ -166,7 +166,7 @@ To define a type guard, we simply need to define a function whose return type is
 
 ```ts
 function isFish(pet: Fish | Bird): pet is Fish {
-    return (<Fish>pet).swim !== undefined;
+    return (pet as Fish).swim !== undefined;
 }
 ```
 
